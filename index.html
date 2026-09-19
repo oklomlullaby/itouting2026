@@ -234,39 +234,30 @@ button:focus-visible {
 }
 
 /* เครื่องหมายตอนกด */
+/* รูปไข่ดาวแทนเครื่องหมายถูก */
 .bingo-cell.marked::after {
-    content: "✓";
+    content: "";
 
     position: absolute;
-
     top: 50%;
     left: 50%;
 
-    transform:
-        translate(-50%, -50%)
-        scale(1);
+    width: 76%;
+    height: 76%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translate(-50%, -50%);
 
-    width: 64%;
-    aspect-ratio: 1;
+    background-color: transparent;
+    background-image: url("images/fried-egg_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.9;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
 
-    border-radius: 50%;
-
-    font-family: 'Kanit', sans-serif;
-    font-size: clamp(24px, 8vw, 48px);
-    font-weight: 800;
-
-    color: #ffffff;
-
-    background: rgba(215, 53, 37, 0.88);
-
-    border: 4px solid rgba(255,255,255,0.9);
-
-    box-shadow:
-        0 3px 8px rgba(0,0,0,0.18);
+    pointer-events: none;
 
     animation: bingoMark 0.22s ease-out;
 }
